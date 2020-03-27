@@ -1,5 +1,5 @@
 setInterval(function () {
-  let currtentDate = new Date()
+  const currtentDate = new Date()
   let hours = currtentDate.getHours().toString(2)
   let minutes = currtentDate.getMinutes().toString(2)
   let seconds = currtentDate.getSeconds().toString(2)
@@ -32,8 +32,6 @@ setInterval(function () {
   while (year.length < 11){
     year = "0" + year
   }
-
-
 
 
   // DOM word geupdate en word gewisseld tussen classes
@@ -69,24 +67,24 @@ setInterval(function () {
 // berkent dagen en tijd voor digitale klik
 function digitalTime() {
 
-    const date = new Date();
-    const day = ['Zon', 'Ma', 'Din', 'Woe', 'Don', 'Fri', 'Zat'];
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
+  const date = new Date();
+  const day = ['Zon', 'Ma', 'Din', 'Woe', 'Don', 'Fri', 'Zat'];
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
 
-    document.querySelector('.day').innerHTML = day[date.getDay()];
-    document.querySelector('.hours').innerHTML = minutesWithLeadingZero(hours);
-    document.querySelector('.minutes').innerHTML = minutesWithLeadingZero(minutes);
-    document.querySelector('.seconds').innerHTML = minutesWithLeadingZero(seconds);
+  document.querySelector('.day').innerHTML = day[date.getDay()];
+  document.querySelector('.hours').innerHTML = minutesWithLeadingZero(hours);
+  document.querySelector('.minutes').innerHTML = minutesWithLeadingZero(minutes);
+  document.querySelector('.seconds').innerHTML = minutesWithLeadingZero(seconds);
 
-    // functie heeft parameter hier mee extra 0 toegevoegd 
-    function minutesWithLeadingZero(addZero) {
-        if (addZero < 10) {
-            return '0' + addZero;
-        }
-        return addZero;
-    }
+  // functie heeft parameter hier mee extra 0 toegevoegd 
+  function minutesWithLeadingZero(addZero) {
+      if (addZero < 10) {
+        return '0' + addZero;
+      }
+      return addZero;
+  }
 }
 
 setInterval(digitalTime, 100);
