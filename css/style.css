@@ -381,7 +381,7 @@ main{
   margin: 0 auto;
 
 }
-#hours, #minsminutes, #seconds, #day, #month, #year {
+#hours, #minutes, #seconds, #day, #month, #year {
   padding: 15px;
 }
 
