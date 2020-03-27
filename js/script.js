@@ -10,27 +10,27 @@ setInterval(function () {
   
   // -- maakt alle velden de juist lengte.
   while (hours.length < 5) {
-    hours = "0" + hours
+    hours = "0".repeat(5-hours.length)+hours 
   }
 
   while (minutes.length < 6) {
-    minutes = "0" + minutes
+    minutes = "0".repeat(6-minutes.length)+minutes 
   }
   
   while (seconds.length < 6) {
-    seconds = "0" + seconds
+    seconds = "0".repeat(6-seconds.length)+seconds
   }
 
   while (day.length < 5){
-    day = "0" + day
+    day = "0".repeat(5-day.length)+day
   }
 
   while (month.length < 4){
-    month = "0" + month
+    month = "0".repeat(4-month.length)+month
   }
 
   while (year.length < 11){
-    year = "0" + year
+    year = "0".repeat(11-year.length)+year
   }
 
 
